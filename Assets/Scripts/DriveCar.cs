@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class DriveCar : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public PlayerSpawner playerSpawner;
     [SerializeField] Rigidbody2D frontRb;
     [SerializeField] Rigidbody2D backRb;
     [SerializeField] Rigidbody2D carRb;
@@ -47,6 +47,10 @@ public class DriveCar : MonoBehaviour
         {
             isGrounded = true;
         }
+        if(collision.gameObject.layer == 6) // CheckPoint Layer
+        {
+            UpdateRespawnPoint();
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -69,6 +73,14 @@ public class DriveCar : MonoBehaviour
             {
                 carRb.AddTorque(-10 * rotationSpeed * Time.deltaTime);
             }
+        }
+    }
+    private void UpdateRespawnPoint()
+    {
+        // Assuming you want to update where to the current position of the player
+        if (playerSpawner != null)
+        {
+            playerSpawner.UpdateRespawnPoint(transform.position);
         }
     }
 }
