@@ -49,6 +49,10 @@ public class DriveCar : MonoBehaviour
         {
             UpdateRespawnPoint();
         }
+        if(collision.gameObject.layer == 7) // Finish Line Layer
+        {
+            this.GetComponent<DriveCar>().enabled = false;
+        } 
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
