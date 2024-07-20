@@ -12,7 +12,7 @@ public class DriveCar : MonoBehaviour
     [SerializeField] float speed = 150f;
     [SerializeField] float rotSpeed = 300f;
     [SerializeField] float rotationSpeed = 300f;
-    float jumpSpeed = 70f;
+    float jumpSpeed = 150f;
     [SerializeField]bool isGrounded = false;
     float moveInput;
     void Update()
