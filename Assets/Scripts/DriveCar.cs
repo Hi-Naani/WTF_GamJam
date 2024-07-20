@@ -9,8 +9,6 @@ public class DriveCar : MonoBehaviour
     [SerializeField] Rigidbody2D frontRb;
     [SerializeField] Rigidbody2D backRb;
     [SerializeField] Rigidbody2D carRb;
-    [SerializeField] CircleCollider2D frontCollider;
-    [SerializeField] CircleCollider2D backCollider;
     [SerializeField] float speed = 150f;
     [SerializeField] float rotSpeed = 300f;
     [SerializeField] float rotationSpeed = 300f;
