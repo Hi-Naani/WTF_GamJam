@@ -12,9 +12,11 @@ public class Timer : MonoBehaviour
     public UI_GameMenu gameMenu;
     public UI_LevelTwo levelTwo;
     public GameLevel gameLevel;
+    public bool restrictTimer;
 
     void Start()
     {
+        restrictTimer = false;
         timer = time;
         if (gameLevel == GameLevel.tutorialLevel)
         {
@@ -34,25 +36,29 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timer > 0)
+        if (!restrictTimer)
         {
-            timer -= Time.deltaTime;
-            int mins = (int)timer / 60;
-            int secs = (int)timer % 60;
-            DisplayTimer(mins, secs);
-        }
-        else
-        {
-            if (gameLevel == GameLevel.tutorialLevel)
+            if (timer > 0)
             {
-                gameMenu.OnLoose();
+                timer -= Time.deltaTime;
+                int mins = (int)timer / 60;
+                int secs = (int)timer % 60;
+                DisplayTimer(mins, secs);
             }
-            else if (gameLevel == GameLevel.levelOne)
+            else
             {
-                levelTwo.OnLoose();
+                if (gameLevel == GameLevel.tutorialLevel)
+                {
+                    gameMenu.OnLoose();
+                }
+                else if (gameLevel == GameLevel.levelOne)
+                {
+                    levelTwo.OnLoose();
+                }
+
             }
-           
         }
+        
         
     }
 

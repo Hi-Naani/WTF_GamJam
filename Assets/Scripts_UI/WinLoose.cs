@@ -27,13 +27,12 @@ public class WinLoose : MonoBehaviour
     {
         if (collision.CompareTag("Finish"))
         {
-            //gameLevel = GameLevel.tutorialLevel;
-            gameMenu.OnWin(GameLevel.tutorialLevel);
+            gameMenu.OnWin();
         }
 
         if (collision.CompareTag("Finish_1"))
         {
-            levelTwo.OnWin(GameLevel.levelOne);
+            levelTwo.OnWin();
         }
 
     }

@@ -8,6 +8,8 @@ public class UI_GameMenu : MonoBehaviour
     public EnumClassGM gameState;
     public GameLevel gameLevel;
     public List<GameObject> panels = new List<GameObject>();
+    public SpawningStars spawningStars;
+    public Timer timer;
 
     private void Awake()
     {
@@ -22,7 +24,9 @@ public class UI_GameMenu : MonoBehaviour
         }
 
         gameState = EnumClassGM.toPaused;
-        
+        GameObject.Find("Vehicle").GetComponent<DriveCar>().enabled = true;
+        spawningStars = this.GetComponent<SpawningStars>();
+        timer = this.GetComponent<Timer>();
     }
 
    
@@ -71,13 +75,12 @@ public class UI_GameMenu : MonoBehaviour
         
     }
 
-    public void OnWin(GameLevel gameLevel)
+    public void OnWin()
     {
-        if (gameLevel.Equals(GameLevel.tutorialLevel))
-        {
-            Time.timeScale = 0;
-            panels[2].SetActive(true);
-        }
+        GameObject.Find("Vehicle").GetComponent<DriveCar>().enabled = false;
+        timer.restrictTimer = true;
+        panels[2].SetActive(true);
+        spawningStars.CallinMethodForStars();
     }
 
     public void OnLoose()

@@ -8,6 +8,8 @@ public class UI_LevelTwo : MonoBehaviour
     public EnumClassGM gameState;
     public GameLevel gameLevel;
     public List<GameObject> panels = new List<GameObject>();
+    public SpawningStars spawningStars;
+    public Timer timer;
 
     private void Awake()
     {
@@ -22,7 +24,9 @@ public class UI_LevelTwo : MonoBehaviour
         }
 
         gameState = EnumClassGM.toPaused;
-       // gameLevel = GameLevel.levelOne;
+        spawningStars = this.GetComponent<SpawningStars>();
+        timer = this.GetComponent<Timer>();
+        // gameLevel = GameLevel.levelOne;
     }
 
 
@@ -64,11 +68,12 @@ public class UI_LevelTwo : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public void OnWin(GameLevel gameLevel)
+    public void OnWin()
     {
-
-        Time.timeScale = 0;
-        panels[2].SetActive(true);   
+        GameObject.Find("Vehicle").GetComponent<DriveCar>().enabled = false;
+        timer.restrictTimer = true;
+        panels[2].SetActive(true);
+        spawningStars.CallinMethodForStars();
     }
 
     public void OnLoose()
