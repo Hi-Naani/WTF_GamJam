@@ -10868,14 +10868,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5177368811607971836, guid: 812f122cf4235484790a7d6def1ef58f, type: 3}
-      propertyPath: m_ChildCameras.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5177368811607971836, guid: 812f122cf4235484790a7d6def1ef58f, type: 3}
-      propertyPath: m_Instructions.Array.data[0].m_Hold
-      value: 1.5
-      objectReference: {fileID: 0}
     - target: {fileID: 5384827419174323145, guid: 812f122cf4235484790a7d6def1ef58f, type: 3}
       propertyPath: target
       value: 

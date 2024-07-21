@@ -156,7 +156,7 @@ MonoBehaviour:
   - {fileID: 6665607735221870988}
   m_Instructions:
   - m_VirtualCamera: {fileID: 8241506041958030630}
-    m_Hold: 1
+    m_Hold: 1.5
     m_Blend:
       m_Style: 0
       m_Time: 0
@@ -430,5 +430,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  SmoothSpeed: 40
+  SmoothSpeed: 15
   offset: {x: 6.33, y: 6, z: -10}
