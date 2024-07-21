@@ -9279,10 +9279,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1232308713629621201, guid: 3918ea0f32c11fb458525cff2b0ee2d5, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1264801694422704910, guid: 3918ea0f32c11fb458525cff2b0ee2d5, type: 3}
       propertyPath: playerSpawner
       value: 
       objectReference: {fileID: 990328586}
+    - target: {fileID: 1932513993498448696, guid: 3918ea0f32c11fb458525cff2b0ee2d5, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3603727081657139123, guid: 3918ea0f32c11fb458525cff2b0ee2d5, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3781771016557314083, guid: 3918ea0f32c11fb458525cff2b0ee2d5, type: 3}
       propertyPath: m_Size.x
       value: 6.3223414
