@@ -8,6 +8,7 @@ public class UI_MainMenu : MonoBehaviour
     public List<GameObject> buttons = new List<GameObject>();
     //public GameObject[] buttons;
     public GameObject howToPlayPanel;
+    public bool enteredHowToPlayMenu;
     void Start()
     {
         foreach(var i in buttons)
@@ -16,29 +17,49 @@ public class UI_MainMenu : MonoBehaviour
         }
 
         howToPlayPanel.SetActive(false);
+        enteredHowToPlayMenu = false;
     }
 
-    void OnPlayButtonPressed()
+    void Update()
+    {
+        if(enteredHowToPlayMenu)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                foreach (var i in buttons)
+                {
+                    i.SetActive(true);
+                }
+
+                howToPlayPanel.SetActive(false);
+                enteredHowToPlayMenu = false;
+            }
+        }   
+    }
+
+    public void OnPlayButtonPressed()
     {
         SceneManager.LoadScene(1);
     }
 
-    void OnHowToPlayButtonPressed() 
+    public void OnHowToPlayButtonPressed() 
     {
         foreach (var i in buttons)
         {
             i.SetActive(false);
         }
+        enteredHowToPlayMenu = true;
 
         howToPlayPanel.SetActive(true);
     }
 
-    void OnExitButtonPressed()
+    public void OnExitButtonPressed()
     {
         Application.Quit();
+        Debug.Log("Quit");
     }
 
-    void OnBackButtonPressed()
+    public void OnBackButtonPressed()
     {
         foreach (var i in buttons)
         {
@@ -47,4 +68,5 @@ public class UI_MainMenu : MonoBehaviour
 
         howToPlayPanel.SetActive(false);
     }
+
 }

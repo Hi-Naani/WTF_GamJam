@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &229336496
 RectTransform:
   m_ObjectHideFlags: 0
@@ -248,7 +248,8 @@ MonoBehaviour:
   - {fileID: 6188060426486416244}
   - {fileID: 5244047603987525036}
   - {fileID: 4031875446350512828}
-  howToPlayPanel: {fileID: 0}
+  howToPlayPanel: {fileID: 229336495}
+  enteredHowToPlayMenu: 0
 --- !u!1 &628101168
 GameObject:
   m_ObjectHideFlags: 0
@@ -1066,7 +1067,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7770978933616505200}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 441770438}
+        m_TargetAssemblyTypeName: UI_MainMenu, Assembly-CSharp
+        m_MethodName: OnExitButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2375061531516562736
 GameObject:
   m_ObjectHideFlags: 0
@@ -1212,7 +1225,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &4107999976155419212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1342,7 +1355,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &5636868370402825248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1386,7 +1399,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 963458089202371335}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 441770438}
+        m_TargetAssemblyTypeName: UI_MainMenu, Assembly-CSharp
+        m_MethodName: OnPlayButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6188060426486416244
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,7 +1430,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &6558529015463761074
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1634,7 +1659,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1532426215909169344}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 441770438}
+        m_TargetAssemblyTypeName: UI_MainMenu, Assembly-CSharp
+        m_MethodName: OnHowToPlayButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &8944320285374498016
 CanvasRenderer:
   m_ObjectHideFlags: 0
