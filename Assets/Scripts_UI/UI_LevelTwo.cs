@@ -26,6 +26,7 @@ public class UI_LevelTwo : MonoBehaviour
         gameState = EnumClassGM.toPaused;
         spawningStars = this.GetComponent<SpawningStars>();
         timer = this.GetComponent<Timer>();
+        GameObject.Find("Vehicle_Final").GetComponent<DriveCar>().enabled = true;
         // gameLevel = GameLevel.levelOne;
     }
 
@@ -70,7 +71,7 @@ public class UI_LevelTwo : MonoBehaviour
 
     public void OnWin()
     {
-        GameObject.Find("Vehicle").GetComponent<DriveCar>().enabled = false;
+        GameObject.Find("Vehicle_Final").GetComponent<DriveCar>().enabled = false;
         timer.restrictTimer = true;
         panels[2].SetActive(true);
         spawningStars.CallinMethodForStars();

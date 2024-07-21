@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class UI_MainMenu : MonoBehaviour
 {
     public List<GameObject> buttons = new List<GameObject>();
-    //public GameObject[] buttons;
     public GameObject howToPlayPanel;
     public bool enteredHowToPlayMenu;
     void Start()

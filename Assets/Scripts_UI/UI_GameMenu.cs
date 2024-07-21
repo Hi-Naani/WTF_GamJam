@@ -24,7 +24,7 @@ public class UI_GameMenu : MonoBehaviour
         }
 
         gameState = EnumClassGM.toPaused;
-        GameObject.Find("Vehicle").GetComponent<DriveCar>().enabled = true;
+        GameObject.Find("Vehicle_Final").GetComponent<DriveCar>().enabled = true;
         spawningStars = this.GetComponent<SpawningStars>();
         timer = this.GetComponent<Timer>();
     }
@@ -77,7 +77,7 @@ public class UI_GameMenu : MonoBehaviour
 
     public void OnWin()
     {
-        GameObject.Find("Vehicle").GetComponent<DriveCar>().enabled = false;
+        GameObject.Find("Vehicle_Final").GetComponent<DriveCar>().enabled = false;
         timer.restrictTimer = true;
         panels[2].SetActive(true);
         spawningStars.CallinMethodForStars();
