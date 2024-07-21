@@ -10,7 +10,12 @@ public class UI_GameMenu : MonoBehaviour
     public List<GameObject> panels = new List<GameObject>();
     void Start()
     {
-        panels[0].SetActive(false);
+        Time.timeScale = 1.0f;
+        foreach (var i in panels)
+        {
+            i.SetActive(false);
+        }
+        //panels[0].SetActive(false);
         gameState = EnumClassGM.toPaused;
         gameLevel = GameLevel.tutorialLevel;
     }
@@ -42,7 +47,7 @@ public class UI_GameMenu : MonoBehaviour
 
     public void OnRestartButtonPressed()
     {
-        Time.timeScale = 1.0f;
+        
         SceneManager.LoadScene(1);
     }
 
@@ -72,5 +77,13 @@ public class UI_GameMenu : MonoBehaviour
             Time.timeScale = 0;
             panels[3].SetActive(true);
         }
+    }
+
+    public void OnLoose()
+    {
+        Time.timeScale = 0;
+        gameState = EnumClassGM.lost;
+        panels[1].SetActive(true);
+        
     }
 }

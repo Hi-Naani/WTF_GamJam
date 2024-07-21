@@ -5,17 +5,7 @@ using UnityEngine;
 public class WinLoose : MonoBehaviour
 {
     public UI_GameMenu gameMenu;
-    GameLevel gameLevel;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    int time;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -30,6 +20,6 @@ public class WinLoose : MonoBehaviour
             gameMenu.OnWin(GameLevel.levelOne);
         }
 
-
     }
+
 }
