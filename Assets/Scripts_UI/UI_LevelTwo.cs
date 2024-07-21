@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class UI_GameMenu : MonoBehaviour
+public class UI_LevelTwo : MonoBehaviour
 {
     public EnumClassGM gameState;
     public GameLevel gameLevel;
@@ -11,7 +11,7 @@ public class UI_GameMenu : MonoBehaviour
 
     private void Awake()
     {
-        gameLevel = GameLevel.tutorialLevel;
+        gameLevel = GameLevel.levelOne;
     }
     void Start()
     {
@@ -22,10 +22,10 @@ public class UI_GameMenu : MonoBehaviour
         }
 
         gameState = EnumClassGM.toPaused;
-        
+       // gameLevel = GameLevel.levelOne;
     }
 
-   
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -36,13 +36,13 @@ public class UI_GameMenu : MonoBehaviour
 
     private void PauseButtonFunctionality()
     {
-        if(gameState == EnumClassGM.toPaused)
+        if (gameState == EnumClassGM.toPaused)
         {
             panels[0].SetActive(true);
             Time.timeScale = 0;
             gameState = EnumClassGM.toPlay;
         }
-        else if(gameState == EnumClassGM.toPlay)
+        else if (gameState == EnumClassGM.toPlay)
         {
             panels[0].SetActive(false);
             Time.timeScale = 1.0f;
@@ -52,7 +52,8 @@ public class UI_GameMenu : MonoBehaviour
 
     public void OnRestartButtonPressed()
     {
-        SceneManager.LoadScene(1);
+
+        SceneManager.LoadScene(2);
         Debug.Log(gameObject.scene.name);
 
     }
@@ -62,22 +63,12 @@ public class UI_GameMenu : MonoBehaviour
         Time.timeScale = 1.0f;
         SceneManager.LoadScene(0);
     }
-    public void OnNextLevelButtonPressed()
-    {
-        Time.timeScale = 1.0f;
-        SceneManager.LoadScene(2);
-        gameLevel = GameLevel.levelOne;
-        Debug.Log(gameLevel);
-        
-    }
 
     public void OnWin(GameLevel gameLevel)
     {
-        if (gameLevel.Equals(GameLevel.tutorialLevel))
-        {
-            Time.timeScale = 0;
-            panels[2].SetActive(true);
-        }
+
+        Time.timeScale = 0;
+        panels[2].SetActive(true);   
     }
 
     public void OnLoose()
@@ -85,6 +76,6 @@ public class UI_GameMenu : MonoBehaviour
         Time.timeScale = 0;
         gameState = EnumClassGM.lost;
         panels[1].SetActive(true);
-        
+
     }
 }

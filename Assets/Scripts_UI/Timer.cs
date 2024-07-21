@@ -10,11 +10,25 @@ public class Timer : MonoBehaviour
     public int time = 301;
     [HideInInspector] public float timer;
     public UI_GameMenu gameMenu;
+    public UI_LevelTwo levelTwo;
+    public GameLevel gameLevel;
 
     void Start()
     {
         timer = time;
-        gameMenu = GetComponent<UI_GameMenu>();
+        if (gameLevel == GameLevel.tutorialLevel)
+        {
+            gameMenu = GetComponent<UI_GameMenu>();
+            levelTwo = null;
+            Debug.Log("Hi");
+        }
+        else if(gameLevel == GameLevel.levelOne)
+        {
+            levelTwo = GetComponent<UI_LevelTwo>();
+            gameMenu = null;
+            Debug.Log("Hello");
+        }
+        
     }
 
     // Update is called once per frame
@@ -29,7 +43,15 @@ public class Timer : MonoBehaviour
         }
         else
         {
-            gameMenu.OnLoose();
+            if (gameLevel == GameLevel.tutorialLevel)
+            {
+                gameMenu.OnLoose();
+            }
+            else if (gameLevel == GameLevel.levelOne)
+            {
+                levelTwo.OnLoose();
+            }
+           
         }
         
     }
