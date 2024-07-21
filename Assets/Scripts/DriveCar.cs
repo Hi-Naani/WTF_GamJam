@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class DriveCar : MonoBehaviour
 {
+    [SerializeField] AudioSource car;
     public PlayerSpawner playerSpawner;
     [SerializeField] Rigidbody2D frontRb;
     [SerializeField] Rigidbody2D backRb;
@@ -29,15 +30,23 @@ public class DriveCar : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        Move();
+    }
+    void Move()
+    {
         frontRb.AddTorque(-moveInput * speed * Time.deltaTime);
         backRb.AddTorque(-moveInput * speed * Time.deltaTime);
         carRb.AddTorque(moveInput * rotSpeed * Time.deltaTime);
+        /*if(moveInput != 0)
+        {
+            car.Play();
+        }*/
     }
     void Jump()
     {
         Vector2 force = new Vector2(0f, jumpSpeed);
-        //carRb.velocity = Vector2.up * jumpSpeed;
         carRb.AddForce(force);
+        car.Play();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
