@@ -34,7 +34,14 @@ public class ResetPlayer : MonoBehaviour
             swapnPos = collision.transform.position;
         }
 
-        if(collision.gameObject.layer == 3)
+        /*if(collision.gameObject.layer == 3)
+        {
+            upsideDown = true;
+        }*/
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == 3)
         {
             upsideDown = true;
         }

@@ -16,6 +16,10 @@ public class DriveCar : MonoBehaviour
     public float jumpSpeed = 1000f;
     [SerializeField]bool isGrounded = false;
     float moveInput;
+    private void Start()
+    {
+        this.GetComponent<DriveCar>().enabled = false;
+    }
     void Update()
     {
         moveInput = Input.GetAxisRaw("Horizontal");
