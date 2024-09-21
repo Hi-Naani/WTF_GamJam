@@ -21710,6 +21710,9 @@ MonoBehaviour:
   - {fileID: 4493279260925583051}
   - {fileID: 1585758152365288193}
   - {fileID: 7645112841269421166}
+  stars3time: 240
+  stars2time: 150
+  stars1time: 0
 --- !u!1 &1585758152365288193
 GameObject:
   m_ObjectHideFlags: 0
