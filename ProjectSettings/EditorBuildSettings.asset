@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/NewTutorial_Level_1.unity
     guid: 3e07b8ea7ea8e44be9ab69c7fdad7fbb
   - enabled: 1
-    path: Assets/Scenes/Level2AssetAnim.unity
-    guid: 30a8367ecf13a4b8c9920a54fb414486
+    path: Assets/Scenes/Tests/Level2.1.unity
+    guid: 938a762a400854480943ee8497f15447
   m_configObjects: {}

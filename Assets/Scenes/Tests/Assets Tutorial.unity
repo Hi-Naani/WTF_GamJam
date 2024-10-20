@@ -735,7 +735,7 @@ Transform:
   m_GameObject: {fileID: 91831634}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 576.8, y: 4.82, z: 0.67474675}
+  m_LocalPosition: {x: 576.8, y: 4.4, z: 0.67474675}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8867,7 +8867,7 @@ Transform:
   m_GameObject: {fileID: 1596139752}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 371.77, y: 4.82, z: 0.67474675}
+  m_LocalPosition: {x: 371.77, y: 4.3, z: 0.67474675}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11807,7 +11807,7 @@ Transform:
   m_GameObject: {fileID: 2131761695}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 272.8, y: -2.5999992, z: 0}
+  m_LocalPosition: {x: 291.5, y: -2.5999992, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -12142,7 +12142,7 @@ MonoBehaviour:
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 10
-    OrthographicSize: 13.5
+    OrthographicSize: 17.5
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -13094,9 +13094,9 @@ MonoBehaviour:
   frontRb: {fileID: 1554486219709057062}
   backRb: {fileID: 6933274662544227877}
   carRb: {fileID: 2795344149077224431}
-  speed: 1000
-  rotSpeed: 300
-  rotationSpeed: 300
+  speed: 920
+  rotSpeed: 350
+  rotationSpeed: 350
   jumpSpeed: 650
   isGrounded: 0
 --- !u!4 &4344634135556425064
